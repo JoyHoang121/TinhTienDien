@@ -23,12 +23,17 @@ public class DienKinhDoanhThapAp extends Dien {
         sb.append('}');
         return sb.toString();
     }
-    private int tongSoKySuDung(){
+
+    private int tongSoKySuDung() {
         return soDienGioCaoDiem + soDienGioThapDiem + soDienGioBinhThuong;
     }
+
     @Override
-    public int Calculate() {
-        int tongTienThanhToan = soDienGioBinhThuong * 2666 + soDienGioCaoDiem * 4578 + soDienGioThapDiem * 1622;
-        return tongTienThanhToan;
+    public double Calculate() {
+        double tongTienThanhToanChuaVAT, tongTienThanhToanVAT;
+        tongTienThanhToanChuaVAT = soDienGioBinhThuong * 2442 + soDienGioCaoDiem * 4251 + soDienGioThapDiem * 1361;
+        tongTienThanhToanVAT = tongTienThanhToanChuaVAT + tongTienThanhToanChuaVAT * 0.1;
+        return tongTienThanhToanVAT;
+
     }
 }

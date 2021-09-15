@@ -6,8 +6,9 @@ public class DienSinhHoatBanSi extends Dien {
         return soKy = soCuoiKy - soDauky;
     }
     @Override
-    public int Calculate() {
+    public double Calculate() {
         int tienThanhToan = 0;
+        double tienThanhToanVAT = 0;
         if (soKy <= 50) {
             tienThanhToan = soKy * 1403;
         } else if (soKy <= 100) {
@@ -21,7 +22,8 @@ public class DienSinhHoatBanSi extends Dien {
         } else {
             tienThanhToan = 50 * 1403 + 50 * 1459 + 100 * 1590 + 100 * 1971 + 100 * 2231 + (soKy-400) * 2323;
         }
-        return tienThanhToan;
+        tienThanhToanVAT = tienThanhToan + tienThanhToan * 0.1;
+        return tienThanhToanVAT;
     }
 
     @Override

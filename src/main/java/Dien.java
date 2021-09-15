@@ -18,7 +18,7 @@ public abstract class Dien {
         this.soCuoiKy = sc.nextInt();
     }
 
-    public abstract int Calculate();
+    public abstract double Calculate();
 
     @Override
     public String toString() {

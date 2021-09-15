@@ -1,8 +1,7 @@
 import java.util.Scanner;
 
-public class DienKinhDoanhCaoAp extends Dien{
-    private int soDienGioBinhThuong,soDienGioThapDiem,soDienGioCaoDiem;
-
+public class DienKinhDoanhCaoAp extends Dien {
+    private int soDienGioBinhThuong, soDienGioThapDiem, soDienGioCaoDiem;
 
 
     @Override
@@ -17,14 +16,17 @@ public class DienKinhDoanhCaoAp extends Dien{
 
 
     @Override
-    public int Calculate() {
-        return soDienGioBinhThuong * 2442 + soDienGioCaoDiem * 4251 + soDienGioThapDiem * 1361;
-
+    public double Calculate() {
+        double tongTienThanhToanChuaVAT, tongTienThanhToanVAT;
+        tongTienThanhToanChuaVAT = soDienGioBinhThuong * 2442 + soDienGioCaoDiem * 4251 + soDienGioThapDiem * 1361;
+        tongTienThanhToanVAT = tongTienThanhToanChuaVAT + tongTienThanhToanChuaVAT * 0.1;
+        return tongTienThanhToanVAT;
     }
 
-    private int tongSoKySuDung(){
+    private int tongSoKySuDung() {
         return soDienGioCaoDiem + soDienGioThapDiem + soDienGioBinhThuong;
     }
+
     @Override
     public String toString() {
         final StringBuffer sb = new StringBuffer("DienKinhDoanhCaoAp{");
