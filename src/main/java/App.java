@@ -28,7 +28,6 @@ public class App {
             System.out.println(type);
         }
 
-        System.out.println("Số tiền điện thanh toán");
         double total = 0;
         for (Dien s : list) {
             total +=  s.Calculate();

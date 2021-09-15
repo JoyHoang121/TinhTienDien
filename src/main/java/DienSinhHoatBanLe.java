@@ -7,22 +7,22 @@ public class DienSinhHoatBanLe extends Dien {
 
     @Override
     public double Calculate() {
-        int tienThanhToan = 0;
-        double tienThanhToanVAT = 0;
+        int tienThanhToanChuaVAT;
+        double tienThanhToanVAT;
         if (soKy <= 50) {
-            tienThanhToan = soKy * 1678;
+            tienThanhToanChuaVAT = soKy * 1678;
         } else if (soKy <= 100) {
-            tienThanhToan = 50 * 1678 + (soKy - 50) * 1734;
+            tienThanhToanChuaVAT = 50 * 1678 + (soKy - 50) * 1734;
         } else if (soKy > 101 && soKy <= 200) {
-            tienThanhToan = 50 * 1678 + 50 * 1734 + (soKy - 100) * 2014;
+            tienThanhToanChuaVAT = 50 * 1678 + 50 * 1734 + (soKy - 100) * 2014;
         } else if (soKy > 201 && soKy <= 300) {
-            tienThanhToan = 50 * 1678 + 50 * 1734 + 100 * 2014 + (soKy - 200) * 2536;
+            tienThanhToanChuaVAT = 50 * 1678 + 50 * 1734 + 100 * 2014 + (soKy - 200) * 2536;
         } else if (soKy > 301 && soKy <= 400) {
-            tienThanhToan = 50 * 1678 + 50 * 1734 + 100 * 2014 + 100 * 2536 + (soKy - 300) * 2834;
+            tienThanhToanChuaVAT = 50 * 1678 + 50 * 1734 + 100 * 2014 + 100 * 2536 + (soKy - 300) * 2834;
         } else {
-            tienThanhToan = 50 * 1403 + 50 * 1734 + 100 * 2014 + 100 * 2536 + 100 * 2834 + (soKy - 400) * 2927;
+            tienThanhToanChuaVAT = 50 * 1403 + 50 * 1734 + 100 * 2014 + 100 * 2536 + 100 * 2834 + (soKy - 400) * 2927;
         }
-        tienThanhToanVAT = tienThanhToan + tienThanhToan * 0.1;
+        tienThanhToanVAT = tienThanhToanChuaVAT + tienThanhToanChuaVAT * 0.1;
         return tienThanhToanVAT;
     }
 
