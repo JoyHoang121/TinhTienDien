@@ -1,7 +1,6 @@
 package entities;
 
 public class DienSinhHoatBanSi extends DienSinhHoat {
-    private int soKy;
 
 
     private int tongSoKySuDung() {

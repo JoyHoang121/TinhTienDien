@@ -5,8 +5,7 @@ import java.util.Scanner;
 public class DienSinhHoat extends Dien {
     protected int soDauky, soCuoiKy;
     protected int soKy = soCuoiKy - soDauky;
-    private double  tienThanhToanChuaVAT;
-    private double tienThanhToanVAT;
+
 
     public DienSinhHoat() {
     }

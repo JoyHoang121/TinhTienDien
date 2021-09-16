@@ -1,7 +1,6 @@
 package entities;
 
 public class DienSinhHoatBanLe extends DienSinhHoat {
-    private int soKy;
 
     private int tongSoKySuDung() {
         return soKy = soCuoiKy - soDauky;
