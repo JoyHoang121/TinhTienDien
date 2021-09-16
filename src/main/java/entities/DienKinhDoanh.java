@@ -26,7 +26,7 @@ public class DienKinhDoanh extends Dien {
     @Override
     public String toString() {
         final StringBuffer sb = new StringBuffer("DienKinhDoanhCaoAp{");
-        sb.append(", soDienGioBinhThuong = ").append(soDienGioBinhThuong);
+        sb.append(" soDienGioBinhThuong = ").append(soDienGioBinhThuong);
         sb.append(", soDienGioThapDiem = ").append(soDienGioThapDiem);
         sb.append(", soDienGioCaoDiem = ").append(soDienGioCaoDiem);
         sb.append(", TongSoKyDienSuDung = ").append(tongSoKySuDung());

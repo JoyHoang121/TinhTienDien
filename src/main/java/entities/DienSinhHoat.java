@@ -32,7 +32,7 @@ public class DienSinhHoat extends Dien {
     }
 
     protected void getDienInfo(StringBuffer sb) {
-        sb.append("soDauky=").append(soDauky);
+        sb.append(" soDauky=").append(soDauky);
         sb.append(", soCuoiKy=").append(soCuoiKy);
     }
 

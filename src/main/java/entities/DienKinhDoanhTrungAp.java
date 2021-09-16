@@ -6,7 +6,7 @@ public class DienKinhDoanhTrungAp extends DienKinhDoanh {
     @Override
     public double calculate() {
         double tongTienThanhToanChuaVAT, tongTienThanhToanVAT;
-        tongTienThanhToanChuaVAT = soDienGioBinhThuong * 2442 + soDienGioCaoDiem * 4251 + soDienGioThapDiem * 1361;
+        tongTienThanhToanChuaVAT = soDienGioBinhThuong * 2442 + soDienGioThapDiem * 1361 + soDienGioCaoDiem * 4251 ;
         tongTienThanhToanVAT = tongTienThanhToanChuaVAT + tongTienThanhToanChuaVAT * 0.1;
         return tongTienThanhToanVAT;
     }
