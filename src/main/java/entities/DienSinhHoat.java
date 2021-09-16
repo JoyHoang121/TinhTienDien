@@ -1,12 +1,17 @@
+package entities;
+
 import java.util.Scanner;
 
-public abstract class Dien {
+public class DienSinhHoat extends Dien {
     protected int soDauky, soCuoiKy;
+    protected int soKy = soCuoiKy - soDauky;
+    private double  tienThanhToanChuaVAT;
+    private double tienThanhToanVAT;
 
-    public Dien() {
+    public DienSinhHoat() {
     }
 
-    public Dien(int soDauky, int soCuoiKy) {
+    public DienSinhHoat(int soDauky, int soCuoiKy) {
         this.soDauky = soDauky;
         this.soCuoiKy = soCuoiKy;
     }
@@ -18,11 +23,10 @@ public abstract class Dien {
         this.soCuoiKy = sc.nextInt();
     }
 
-    public abstract double Calculate();
 
     @Override
     public String toString() {
-        final StringBuffer sb = new StringBuffer("Dien{");
+        final StringBuffer sb = new StringBuffer("entities.Dien{");
         this.getDienInfo(sb);
         sb.append('}');
         return sb.toString();
@@ -31,5 +35,10 @@ public abstract class Dien {
     protected void getDienInfo(StringBuffer sb) {
         sb.append("soDauky=").append(soDauky);
         sb.append(", soCuoiKy=").append(soCuoiKy);
+    }
+
+    @Override
+    public double calculate() {
+        return 0;
     }
 }

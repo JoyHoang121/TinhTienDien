@@ -1,3 +1,5 @@
+import entities.*;
+
 import java.util.Scanner;
 
 public class App {
@@ -30,7 +32,7 @@ public class App {
 
         double total = 0;
         for (Dien s : list) {
-            total +=  s.Calculate();
+            total +=  s.calculate();
         }
         System.out.println("Tổng số tiền phải thanh toán: " + total);
     }
