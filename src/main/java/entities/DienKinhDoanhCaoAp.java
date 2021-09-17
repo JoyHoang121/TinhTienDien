@@ -3,11 +3,13 @@ package entities;
 import java.util.Scanner;
 
 public class DienKinhDoanhCaoAp extends DienKinhDoanh {
-
+    private int giaGioBinhThuong = 2442;
+    private int giaGioThapDiem = 1361;
+    private int giaGioCaoDiem = 4251;
     @Override
     public double calculate() {
         double tongTienThanhToanChuaVAT, tongTienThanhToanVAT;
-        tongTienThanhToanChuaVAT =soDienGioBinhThuong * 2442 + soDienGioThapDiem * 1361 + soDienGioCaoDiem * 4251 ;
+        tongTienThanhToanChuaVAT =soDienGioBinhThuong * giaGioBinhThuong + soDienGioThapDiem * giaGioThapDiem + soDienGioCaoDiem * giaGioCaoDiem ;
         tongTienThanhToanVAT = tongTienThanhToanChuaVAT + tongTienThanhToanChuaVAT * 0.1;
         return tongTienThanhToanVAT;
     }

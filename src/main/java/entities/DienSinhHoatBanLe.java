@@ -1,6 +1,13 @@
 package entities;
 
 public class DienSinhHoatBanLe extends DienSinhHoat {
+    private int giaBac1 = 1678;
+    private int giaBac2 = 1734;
+    private int giaBac3 = 2014;
+    private int giaBac4 = 2536;
+    private int giaBac5 = 2834;
+    private int giaBac6 = 2927;
+
 
     private int tongSoKySuDung() {
         return soKy = soCuoiKy - soDauky;
@@ -11,17 +18,17 @@ public class DienSinhHoatBanLe extends DienSinhHoat {
         int tienThanhToanChuaVAT;
         double tienThanhToanVAT;
         if (soKy <= 50) {
-            tienThanhToanChuaVAT = soKy * 1678;
+            tienThanhToanChuaVAT = soKy * giaBac1;
         } else if (soKy <= 100) {
-            tienThanhToanChuaVAT = 50 * 1678 + (soKy - 50) * 1734;
+            tienThanhToanChuaVAT = 50 * giaBac1 + (soKy - 50) * giaBac2;
         } else if (soKy > 101 && soKy <= 200) {
-            tienThanhToanChuaVAT = 50 * 1678 + 50 * 1734 + (soKy - 100) * 2014;
+            tienThanhToanChuaVAT = 50 * giaBac1 + 50 * giaBac2 + (soKy - 100) * giaBac3;
         } else if (soKy > 201 && soKy <= 300) {
-            tienThanhToanChuaVAT = 50 * 1678 + 50 * 1734 + 100 * 2014 + (soKy - 200) * 2536;
+            tienThanhToanChuaVAT = 50 * giaBac1 + 50 * giaBac2 + 100 * giaBac3 + (soKy - 200) * giaBac4;
         } else if (soKy > 301 && soKy <= 400) {
-            tienThanhToanChuaVAT = 50 * 1678 + 50 * 1734 + 100 * 2014 + 100 * 2536 + (soKy - 300) * 2834;
+            tienThanhToanChuaVAT = 50 * giaBac1 + 50 * giaBac2 + 100 * giaBac3 + 100 * giaBac4 + (soKy - 300) * giaBac5;
         } else {
-            tienThanhToanChuaVAT = 50 * 1403 + 50 * 1734 + 100 * 2014 + 100 * 2536 + 100 * 2834 + (soKy - 400) * 2927;
+            tienThanhToanChuaVAT = 50 * giaBac1 + 50 * giaBac2 + 100 * giaBac3 + 100 * giaBac4 + 100 * giaBac5 + (soKy - 400) * giaBac6;
         }
         tienThanhToanVAT = tienThanhToanChuaVAT + tienThanhToanChuaVAT * 0.1;
         return tienThanhToanVAT;
