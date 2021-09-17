@@ -11,6 +11,7 @@ public class DienSinhHoatBanSi extends DienSinhHoat {
     private int tongSoKySuDung() {
         return soKy = soCuoiKy - soDauky;
     }
+
     @Override
     public double calculate() {
         int tienThanhToanChuaVAT;
@@ -26,7 +27,7 @@ public class DienSinhHoatBanSi extends DienSinhHoat {
         } else if (soKy > 301 && soKy <= 400) {
             tienThanhToanChuaVAT = 50 * giaBac1 + 50 * giaBac2 + 100 * giaBac3 + 100 * giaBac4 + (soKy - 300) * giaBac5;
         } else {
-            tienThanhToanChuaVAT = 50 * giaBac1 + 50 * giaBac2 + 100 * giaBac3 + 100 * giaBac4 + 100 * giaBac5 + (soKy-400) * giaBac6;
+            tienThanhToanChuaVAT = 50 * giaBac1 + 50 * giaBac2 + 100 * giaBac3 + 100 * giaBac4 + 100 * giaBac5 + (soKy - 400) * giaBac6;
         }
         tienThanhToanVAT = tienThanhToanChuaVAT + tienThanhToanChuaVAT * 0.1;
         return tienThanhToanVAT;
