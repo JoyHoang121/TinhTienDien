@@ -2,6 +2,7 @@ package entities;
 
 import java.util.Scanner;
 
+// tinh dien trung ap
 public class DienKinhDoanhTrungAp extends DienKinhDoanh {
     private int giaGioBinhThuong = 2629;
     private int giaGioThapDiem = 1547;
@@ -24,4 +25,6 @@ public class DienKinhDoanhTrungAp extends DienKinhDoanh {
     public String toString() {
         return super.toString();
     }
+
+
 }
